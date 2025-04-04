@@ -1,0 +1,88 @@
+_id: 67efec6e5a5bc56825f9be36
+name: Stripe Functions
+language: javascript
+timeout: 50
+memoryLimit: 100
+triggers:
+  customer:
+    options:
+      bucket: 67efbb748b5d424a37ede359
+      type: INSERT
+    type: bucket
+    active: true
+  paymentMethod:
+    options:
+      bucket: 67efd2d3fe35635b6dfce783
+      type: INSERT
+    type: bucket
+    active: true
+  payment:
+    options:
+      bucket: 67efe308903d916183813d80
+      type: INSERT
+    type: bucket
+    active: true
+  product:
+    options:
+      bucket: 67efe04ab192465f6573bd4c
+      type: INSERT
+    type: bucket
+    active: true
+  plan:
+    options:
+      bucket: 67efe1dfbdc67f60cafed283
+      type: INSERT
+    type: bucket
+    active: true
+  card:
+    options:
+      bucket: 67efcfc42afcd959ca1059be
+      type: INSERT
+    type: bucket
+    active: true
+  deletePaymentMethod:
+    options:
+      bucket: 67efd2d3fe35635b6dfce783
+      type: DELETE
+    type: bucket
+    active: true
+  deleteProduct:
+    options:
+      bucket: 67efe04ab192465f6573bd4c
+      type: DELETE
+    type: bucket
+    active: true
+  deletePayment:
+    options:
+      bucket: 67efe308903d916183813d80
+      type: DELETE
+    type: bucket
+    active: true
+  deletePlan:
+    options:
+      bucket: 67efe1dfbdc67f60cafed283
+      type: DELETE
+    type: bucket
+    active: true
+  deleteCard:
+    options:
+      bucket: 67efcfc42afcd959ca1059be
+      type: DELETE
+    type: bucket
+    active: true
+  createCardToken:
+    type: http
+    active: true
+    options:
+      method: Post
+      path: /createCardToken
+      preflight: true
+env:
+  SECRET_API_KEY: "{SECRET_API_KEY}"
+  STRIPE_TEST: "{STRIPE_TEST}"
+  CUSTOMER_BUCKET_ID: "{CUSTOMER_BUCKET_ID}"
+  PAYMENT_METHOD_ID: "{PAYMENT_METHOD_ID}"
+  PRODUCT_BUCKET_ID: "{PRODUCT_BUCKET_ID}"
+  PLAN_BUCKET_ID: "{PLAN_BUCKET_ID}"
+  PAYMENT_BUCKET_ID: "{PAYMENT_BUCKET_ID}"
+  CARD_BUCKET_ID: "{CARD_BUCKET_ID}"

@@ -1,0 +1,6 @@
+_id: 67efe914fc50016467b1e947
+name: Secret Api Key For Stripe Asset
+active: true
+key: 135jfdk60m92vktx4
+policies:
+  - BucketFullAccess

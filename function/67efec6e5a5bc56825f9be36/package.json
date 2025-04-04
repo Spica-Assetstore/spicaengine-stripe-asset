@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@spica-devkit/bucket": "latest",
+    "node-fetch": "latest",
+    "stripe": "latest"
+  }
+}
