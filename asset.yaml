@@ -1,0 +1,4 @@
+name: Stripe Asset
+description: Methods for working with stripe
+configs: []
+url: "https://github.com/Spica-Assetstore/spicaengine-stripe-asset.git"
